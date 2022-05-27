@@ -11,9 +11,11 @@ const bookRoute = require("./routes/book");
 
 const port = 3000;
 dotenv.config();
+const strConnection =
+  "mongodb+srv://duyphong1504:Duyphong1504@cluster0.svap3.mongodb.net/?retryWrites=true&w=majority";
 
 //connect database
-mongoose.connect(process.env.MONGODB_URL, () => {
+mongoose.connect(strConnection, () => {
   console.log("Connected to MongoDB");
 });
 
